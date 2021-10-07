@@ -36,3 +36,10 @@ $ npx brain-progression
 ```
 
 [![asciicast](https://asciinema.org/a/3unEg44qwm9w7SjceyzzfkY5v.svg)](https://asciinema.org/a/3unEg44qwm9w7SjceyzzfkY5v)
+
+### Prime Game
+```sh
+$ npx brain-prime
+```
+
+[![asciicast](https://asciinema.org/a/8Xda4qmhbl2dYJ5DbVuYdtIS7.svg)](https://asciinema.org/a/8Xda4qmhbl2dYJ5DbVuYdtIS7)
