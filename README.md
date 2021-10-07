@@ -29,3 +29,10 @@ $ npx brain-gcd
 ```
 
 [![asciicast](https://asciinema.org/a/3emLalYNQ1s7JUEvkKIkXnNp0.svg)](https://asciinema.org/a/3emLalYNQ1s7JUEvkKIkXnNp0)
+
+### Progression Game
+```sh
+$ npx brain-progression
+```
+
+[![asciicast](https://asciinema.org/a/3unEg44qwm9w7SjceyzzfkY5v.svg)](https://asciinema.org/a/3unEg44qwm9w7SjceyzzfkY5v)
