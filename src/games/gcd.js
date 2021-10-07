@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, checkAnswer } from '../index.js';
+import greetings, { getRandomNumber, checkAnswer } from '../index.js';
 
 const getGcd = (a, b) => {
   const min = a < b ? a : b;
@@ -12,11 +12,12 @@ const getGcd = (a, b) => {
   return gcd;
 };
 
-const startGcdGame = (name) => {
-  let steps = 3;
+const startGcdGame = () => {
+  const name = greetings();
+  let rounds = 3;
   console.log('Find the greatest common divisor of given numbers.');
-
-  while (steps) {
+  // Как бы вынести этот while отдельно?
+  while (rounds) {
     const a = getRandomNumber(1, 50);
     const b = getRandomNumber(1, 50);
     const rightAnswer = getGcd(a, b);
@@ -27,7 +28,7 @@ const startGcdGame = (name) => {
     const isAnswered = checkAnswer(rightAnswer, userAnswer);
 
     if (isAnswered) {
-      steps -= 1;
+      rounds -= 1;
     } else {
       console.log(`Let's try again, ${name}!`);
       return false;

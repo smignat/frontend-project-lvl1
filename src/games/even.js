@@ -1,13 +1,14 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, checkAnswer } from '../index.js';
+import greetings, { getRandomNumber, checkAnswer } from '../index.js';
 
 const isEven = (num) => num % 2 === 0;
 
-const startEvenGame = (name) => {
-  let steps = 3;
+const startEvenGame = () => {
+  const name = greetings();
+  let rounds = 3;
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-  while (steps) {
+  // Как бы вынести этот while отдельно?
+  while (rounds) {
     const number = getRandomNumber();
     const rightAnswer = isEven(number) ? 'yes' : 'no';
 
@@ -17,7 +18,7 @@ const startEvenGame = (name) => {
     const isAnswered = checkAnswer(rightAnswer, userAnswer);
 
     if (isAnswered) {
-      steps -= 1;
+      rounds -= 1;
     } else {
       console.log(`Let's try again, ${name}!`);
       return false;

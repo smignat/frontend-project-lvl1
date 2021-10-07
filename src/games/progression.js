@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, checkAnswer } from '../index.js';
+import greetings, { getRandomNumber, checkAnswer } from '../index.js';
 
 const createProgression = () => {
   const progressionLength = getRandomNumber(5, 15);
@@ -19,10 +19,13 @@ const createGap = (coll) => {
   return deletedElement;
 };
 
-const startProgressionGame = (name) => {
-  let steps = 3;
+const startProgressionGame = () => {
+  const name = greetings();
+  let rounds = 3;
   console.log('What number is missing in the progression?');
-  while (steps) {
+
+  // Как бы вынести этот while отдельно?
+  while (rounds) {
     const progression = createProgression();
 
     const rightAnswer = createGap(progression);
@@ -32,7 +35,7 @@ const startProgressionGame = (name) => {
     const isAnswered = checkAnswer(rightAnswer, userAnswer);
 
     if (isAnswered) {
-      steps -= 1;
+      rounds -= 1;
     } else {
       console.log(`Let's try again, ${name}!`);
       return false;
