@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 import { getRandomNumber, checkAnswer } from '../index.js';
 
 const getOperation = () => {
-  const operations = ['+', '-', '*', '/'];
-  const operationIndex = getRandomNumber(1, 3);
+  const operations = ['+', '-', '*'];
+  const operationIndex = getRandomNumber(1, 2);
   return operations[operationIndex];
 };
 
@@ -15,8 +15,6 @@ const getRightAnswer = (a, b, operation) => {
       return a - b;
     case '*':
       return a * b;
-    case '/':
-      return a / b;
     default:
       return undefined;
   }
