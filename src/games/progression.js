@@ -26,7 +26,7 @@ const startProgressionGame = (name) => {
     const progression = createProgression();
 
     const rightAnswer = createGap(progression);
-    console.log(`Question: ${progression.join(',')}`);
+    console.log(`Question: ${progression.join(' ')}`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
 
     const isAnswered = checkAnswer(rightAnswer, userAnswer);
