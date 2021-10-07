@@ -1,5 +1,5 @@
 import { greetings } from '../src/index.js';
-import startEvenGame from '../src/games/even.js';
+import startCalcGame from '../src/games/calc.js';
 
 const name = greetings();
-startEvenGame(name);
+startCalcGame(name);
