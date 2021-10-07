@@ -17,8 +17,8 @@ const startGcdGame = (name) => {
   console.log('Find the greatest common divisor of given numbers.');
 
   while (steps) {
-    const a = getRandomNumber(50);
-    const b = getRandomNumber(50);
+    const a = getRandomNumber(1, 50);
+    const b = getRandomNumber(1, 50);
     const rightAnswer = getGcd(a, b);
 
     console.log(`Question: ${a} ${b}`);

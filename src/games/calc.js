@@ -3,7 +3,7 @@ import { getRandomNumber, checkAnswer } from '../index.js';
 
 const getOperation = () => {
   const operations = ['+', '-', '*', '/'];
-  const operationIndex = getRandomNumber(3);
+  const operationIndex = getRandomNumber(1, 3);
   return operations[operationIndex];
 };
 

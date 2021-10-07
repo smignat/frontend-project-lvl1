@@ -15,4 +15,6 @@ export const checkAnswer = (rightAnswer, userAnswer) => {
   return false;
 };
 
-export const getRandomNumber = (n = 10) => Math.floor(Math.random() * n) + 1;
+export const getRandomNumber = (min = 1, max = 10) => min + Math.floor(Math.random() * max);
+
+export default greetings;

@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 import { getRandomNumber, checkAnswer } from '../index.js';
 
 const createProgression = () => {
-  const progressionLength = 5 + getRandomNumber(5);
-  const progressionStep = getRandomNumber(10);
+  const progressionLength = getRandomNumber(5, 15);
+  const progressionStep = getRandomNumber(1, 10);
   const progression = [progressionStep];
   for (let i = 1; i < progressionLength; i += 1) {
     progression[i] = progression[i - 1] + progressionStep;
@@ -12,7 +12,7 @@ const createProgression = () => {
 };
 
 const createGap = (coll) => {
-  const gapPosition = getRandomNumber(coll.length - 1);
+  const gapPosition = getRandomNumber(0, coll.length - 1);
   const deletedElement = coll[gapPosition];
   // eslint-disable-next-line no-param-reassign
   coll[gapPosition] = '..';

@@ -14,7 +14,7 @@ const startPrimeGame = (name) => {
   let steps = 3;
 
   while (steps) {
-    const number = getRandomNumber(50);
+    const number = getRandomNumber(1, 50);
     const rightAnswer = isPrime(number) ? 'yes' : 'no';
 
     console.log(`Question: ${number}`);
