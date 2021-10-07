@@ -5,5 +5,8 @@
 
 [![CI](https://github.com/smignat/frontend-project-lvl1/actions/workflows/github-actions.yml/badge.svg?branch=main)](https://github.com/smignat/frontend-project-lvl1/actions/workflows/github-actions.yml)
 
-### Even Game
+### Even Game preview
 [![asciicast](https://asciinema.org/a/or5fdNBT0nsDDEfclDLiHnq6v.svg)](https://asciinema.org/a/or5fdNBT0nsDDEfclDLiHnq6v)
+
+### Calc Game preview
+[![asciicast](https://asciinema.org/a/UQ3p3PITEUWT86ba9PwwSN6uc.svg)](https://asciinema.org/a/UQ3p3PITEUWT86ba9PwwSN6uc)
