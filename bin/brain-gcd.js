@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { greetings } from '../src/index.js';
-import startEvenGame from '../src/games/even.js';
+import startGcdGame from '../src/games/gcd.js';
 
 const name = greetings();
-startEvenGame(name);
+startGcdGame(name);
