@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const greetings = () => {
+export default () => {
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   return name;
@@ -16,5 +16,3 @@ export const checkAnswer = (rightAnswer, userAnswer) => {
 };
 
 export const getRandomNumber = (min = 1, max = 10) => min + Math.floor(Math.random() * max);
-
-export default greetings;
