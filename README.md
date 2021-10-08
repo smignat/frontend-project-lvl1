@@ -14,32 +14,32 @@ $ make publish
 $ npx brain-even
 ```
 
-[![asciicast](https://asciinema.org/a/lx1UiQkx5XJBUoHXyBOdO78Zq.svg)](https://asciinema.org/a/lx1UiQkx5XJBUoHXyBOdO78Zq)
+[![asciicast](https://asciinema.org/a/Kc445Emz9rZZ6Q1jX2cgbTICS.svg)](https://asciinema.org/a/Kc445Emz9rZZ6Q1jX2cgbTICS)
 
 ### Calc Game
 ```sh
 $ npx brain-calc
 ```
 
-[![asciicast](https://asciinema.org/a/2bCHaBEPFIK8dqmXptsEQpWNh.svg)](https://asciinema.org/a/2bCHaBEPFIK8dqmXptsEQpWNh)
+[![asciicast](https://asciinema.org/a/2YSoouVt49LVNg2uXw30mj4eD.svg)](https://asciinema.org/a/2YSoouVt49LVNg2uXw30mj4eD)
 
 ### GCD Game
 ```sh
 $ npx brain-gcd
 ```
 
-[![asciicast](https://asciinema.org/a/3emLalYNQ1s7JUEvkKIkXnNp0.svg)](https://asciinema.org/a/3emLalYNQ1s7JUEvkKIkXnNp0)
+[![asciicast](https://asciinema.org/a/GGeG1H71N2OWJXpxEdL7cGoGS.svg)](https://asciinema.org/a/GGeG1H71N2OWJXpxEdL7cGoGS)
 
 ### Progression Game
 ```sh
 $ npx brain-progression
 ```
 
-[![asciicast](https://asciinema.org/a/3unEg44qwm9w7SjceyzzfkY5v.svg)](https://asciinema.org/a/3unEg44qwm9w7SjceyzzfkY5v)
+[![asciicast](https://asciinema.org/a/kiFzRuLea5sCskXkLSeApQICi.svg)](https://asciinema.org/a/kiFzRuLea5sCskXkLSeApQICi)
 
 ### Prime Game
 ```sh
 $ npx brain-prime
 ```
 
-[![asciicast](https://asciinema.org/a/8Xda4qmhbl2dYJ5DbVuYdtIS7.svg)](https://asciinema.org/a/8Xda4qmhbl2dYJ5DbVuYdtIS7)
+[![asciicast](https://asciinema.org/a/BGUOzQjntG9P1GZV0pwRtOymo.svg)](https://asciinema.org/a/BGUOzQjntG9P1GZV0pwRtOymo)
