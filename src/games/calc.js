@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import greetings, { getRandomNumber, checkAnswer } from '../index.js';
+import getRandomNumber from '../index.js';
 
 const getOperation = () => {
   const operations = ['+', '-', '*'];
@@ -20,31 +19,18 @@ const getRightAnswer = (a, b, operation) => {
   }
 };
 
-const startCalcGame = () => {
-  let rounds = 3;
-  const name = greetings();
-  console.log('What is the result of the expression?');
-  // Как бы вынести этот while отдельно?
-  while (rounds) {
+const calcGame = () => {
+  const gameDescription = 'What is the result of the expression?';
+  const gameRound = () => {
     const operation = getOperation();
     const a = getRandomNumber();
     const b = getRandomNumber();
     const rightAnswer = getRightAnswer(a, b, operation);
+    const question = `Question: ${a} ${operation} ${b}`;
+    return { rightAnswer, question };
+  };
 
-    console.log(`Question: ${a} ${operation} ${b}`);
-    const userAnswer = Number(readlineSync.question('Your answer: '));
-
-    const isAnswered = checkAnswer(rightAnswer, userAnswer);
-
-    if (isAnswered) {
-      rounds -= 1;
-    } else {
-      console.log(`Let's try again, ${name}!`);
-      return false;
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
-  return true;
+  return { gameDescription, gameRound };
 };
 
-export default startCalcGame;
+export default calcGame;

@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import greetings from '../src/index.js';
+import { getUserName } from '../src/engine.js';
 
-greetings();
+getUserName();

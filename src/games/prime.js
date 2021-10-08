@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import greetings, { getRandomNumber, checkAnswer } from '../index.js';
+import getRandomNumber from '../index.js';
 
 const isPrime = (n) => {
   let counter = 2;
@@ -10,28 +9,16 @@ const isPrime = (n) => {
   return true;
 };
 
-const startPrimeGame = () => {
-  const name = greetings();
-  let rounds = 3;
-  // Как бы вынести этот while отдельно?
-  while (rounds) {
+const primeGame = () => {
+  const gameDescription = 'Answer "yes" if the number is prime, otherwise answer "no".';
+  const gameRound = () => {
     const number = getRandomNumber(1, 50);
     const rightAnswer = isPrime(number) ? 'yes' : 'no';
+    const question = `Question: ${number}`;
+    return { rightAnswer, question };
+  };
 
-    console.log(`Question: ${number}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-
-    const isAnswered = checkAnswer(rightAnswer, userAnswer);
-
-    if (isAnswered) {
-      rounds -= 1;
-    } else {
-      console.log(`Let's try again, ${name}!`);
-      return false;
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
-  return true;
+  return { gameDescription, gameRound };
 };
 
-export default startPrimeGame;
+export default primeGame;
