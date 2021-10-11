@@ -1,13 +1,6 @@
 import getRandomNumber from '../index.js';
 
-const isPrime = (n) => {
-  let counter = 2;
-  while (counter < n) {
-    if (n % counter === 0) return false;
-    counter += 1;
-  }
-  return true;
-};
+const isPrime = (n) => !(n % 2);
 
 const primeGame = () => {
   const gameDescription = 'Answer "yes" if the number is prime, otherwise answer "no".';
