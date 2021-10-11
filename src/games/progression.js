@@ -1,29 +1,31 @@
 import getRandomNumber from '../index.js';
 
-const createProgression = () => {
-  const progressionLength = getRandomNumber(5, 15);
+const createProgression = (progressionLength, gap) => {
   const progressionStep = getRandomNumber(1, 10);
   const progression = [progressionStep];
+
   for (let i = 1; i < progressionLength; i += 1) {
     progression[i] = progression[i - 1] + progressionStep;
   }
-  return progression;
+
+  const rightAnswer = String(progression[gap]);
+  progression[gap] = '..';
+
+  return { progression, rightAnswer };
 };
 
-const createGap = (coll) => {
-  const gapPosition = getRandomNumber(0, coll.length - 1);
-  const deletedElement = coll[gapPosition];
-  // eslint-disable-next-line no-param-reassign
-  coll[gapPosition] = '..';
-  return deletedElement;
+const createGap = (max) => {
+  const gapPosition = getRandomNumber(0, max - 1);
+  return gapPosition;
 };
 
 const progressionGame = () => {
   const gameDescription = 'What number is missing in the progression?';
 
   const gameRound = () => {
-    const progression = createProgression();
-    const rightAnswer = String(createGap(progression));
+    const progressionLength = getRandomNumber(5, 15);
+    const gapPosition = createGap(progressionLength);
+    const { progression, rightAnswer } = createProgression(progressionLength, gapPosition);
     const question = `Question: ${progression.join(' ')}`;
     return { rightAnswer, question };
   };
