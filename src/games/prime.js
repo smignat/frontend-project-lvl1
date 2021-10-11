@@ -1,6 +1,12 @@
 import getRandomNumber from '../index.js';
 
-const isPrime = (n) => !(n % 2);
+const isPrime = (n) => {
+  // Почитал, по идее должна работать и история с квадратом, а не только с делением
+  for (let i = 2, k = Math.sqrt(n); i <= k; i += 1) {
+    if (n % i === 0) return false;
+  }
+  return n > 1;
+};
 
 const primeGame = () => {
   const gameDescription = 'Answer "yes" if the number is prime, otherwise answer "no".';
