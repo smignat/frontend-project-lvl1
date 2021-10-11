@@ -1,9 +1,11 @@
 import getRandomNumber from '../index.js';
 
+const operations = ['+', '-', '*'];
+
 const getOperation = () => {
-  const operations = ['+', '-', '*'];
-  const operationIndex = getRandomNumber(0, 2);
-  return operations[operationIndex];
+  const operationsIndexesCounter = operations.length - 1;
+  const currentOperationIndex = getRandomNumber(0, operationsIndexesCounter);
+  return operations[currentOperationIndex];
 };
 
 const getRightAnswer = (a, b, operation) => {
