@@ -1,14 +1,10 @@
 import getRandomNumber from '../index.js';
 
 const getGcd = (a, b) => {
-  const min = a < b ? a : b;
-  let gcd = 1;
-  for (let i = gcd; i <= min; i += 1) {
-    if (a % i === 0 && b % i === 0) {
-      gcd = i;
-    }
+  if (a !== 0) {
+    return getGcd(b % a, a);
   }
-  return gcd;
+  return b;
 };
 
 const gcdGame = () => {
