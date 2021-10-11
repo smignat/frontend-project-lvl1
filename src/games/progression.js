@@ -23,7 +23,7 @@ const progressionGame = () => {
 
   const gameRound = () => {
     const progression = createProgression();
-    const rightAnswer = createGap(progression);
+    const rightAnswer = String(createGap(progression));
     const question = `Question: ${progression.join(' ')}`;
     return { rightAnswer, question };
   };

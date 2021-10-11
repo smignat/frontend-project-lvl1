@@ -12,7 +12,7 @@ const getUserAnswer = () => {
   return userAnswer;
 };
 
-const checkAnswer = (rightAnswer, userAnswer) => String(rightAnswer) === userAnswer;
+const checkAnswer = (rightAnswer, userAnswer) => rightAnswer === userAnswer;
 
 const startGame = (game, rounds = 3) => {
   const { gameDescription, gameRound } = game();
@@ -29,12 +29,11 @@ const startGame = (game, rounds = 3) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      return undefined;
+      return;
     }
   }
 
   console.log(`Congratulations, ${userName}!`);
-  return undefined;
 };
 
 export default startGame;
