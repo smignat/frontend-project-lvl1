@@ -24,13 +24,12 @@ const startGame = (game, rounds = 3) => {
     console.log(question);
     const userAnswer = getUserAnswer();
 
-    if (checkAnswer(rightAnswer, userAnswer)) {
-      console.log('Correct');
-    } else {
+    if (!(checkAnswer(rightAnswer, userAnswer))) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
+    console.log('Correct');
   }
 
   console.log(`Congratulations, ${userName}!`);
