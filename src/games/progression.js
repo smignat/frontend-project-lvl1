@@ -4,13 +4,11 @@ const createProgression = (progressionLength, gap) => {
   const progression = [];
   const progressionStep = getRandomNumber(1, 10);
   const firstStep = progressionStep;
+  const rightAnswer = String(firstStep + progressionStep * gap);
 
   for (let i = 0; i < progressionLength; i += 1) {
-    progression[i] = firstStep + progressionStep * i;
+    progression[i] = i !== gap ? firstStep + progressionStep * i : '..';
   }
-
-  const rightAnswer = String(progression[gap]);
-  progression[gap] = '..';
 
   return { progression, rightAnswer };
 };
